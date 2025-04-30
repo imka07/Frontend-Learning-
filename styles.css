@@ -1,6 +1,6 @@
 img {
     display: block;
-    max-width: 60%;  /* чтобы img реально менялся вёрсткой */
+    max-width: 40%;  /* чтобы img реально менялся вёрсткой */
     height: auto;
   }
   
