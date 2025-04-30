@@ -1,21 +1,3 @@
-p
-{
-    color: #f40000;
-}
-
-span
-{
-    color: #4dcead;
-}
-
-body {
-    scroll-behavior: smooth;
-  }
-
-  
-
-
-/* styles.css */
 img {
     display: block;
     max-width: 60%;  /* чтобы img реально менялся вёрсткой */
