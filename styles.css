@@ -1,6 +1,205 @@
-img {
-    display: block;
-    max-width: 40%;  /* чтобы img реально менялся вёрсткой */
-    height: auto;
+/* styles.css: Minimalist "Old Money" Personal Card Design */
+
+/* Import strict, clean sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg: #f4efe7;           /* Soft parchment ivory */
+  --text: #2c2a29;         /* Deep charcoal */
+  --accent: #556b2f;       /* Dark olive green */
+  --accent-light: #718f4f; /* Subtle olive highlight */
+  --border: #d9d2c7;       /* Soft stone */
+}
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+header a {
+  margin: 0.5rem 1rem;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
+  position: relative;
+}
+
+header a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+header a:hover::after {
+  width: 100%;
+}
+
+/* Sections */
+#Main, #AboutMe, #Portfolio, #Contacts {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+#Main h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#Main h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+#Main img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  margin-top: 1rem;
+}
+
+/* About Me */
+#AboutMe h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--accent-light);
+}
+
+#AboutMe h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#AboutMe p, #AboutMe span {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+#AboutMe ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+}
+
+/* Portfolio Link */
+#Portfolio h2 a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  position: relative;
+}
+
+#Portfolio h2 a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-light);
+  transition: width 0.3s ease;
+}
+
+#Portfolio h2 a:hover::after {
+  width: 100%;
+}
+
+/* Contacts */
+#Contacts h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+#Contacts ul {
+  list-style: none;
+}
+
+#Contacts li {
+  margin-bottom: 0.5rem;
+}
+
+#Contacts a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 400;
+  position: relative;
+}
+
+#Contacts a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+#Contacts a:hover::after {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+  header h1 {
+    margin-bottom: 1rem;
+  }
+  header a {
+    margin: 0.25rem 0;
+  }
+}
