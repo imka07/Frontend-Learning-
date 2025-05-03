@@ -1,0 +1,36 @@
+img{
+    display: block;
+    max-width: 40%;
+    height: auto;
+}
+
+nav a 
+{
+    color: crimson;
+    
+}
+
+article
+{
+    color: blueviolet;
+}
+
+article time 
+{
+    color: brown;
+}
+
+h3
+{
+    color: chocolate;
+}
+
+h2
+{
+    color: crimson;
+}
+
+aside > section > p 
+{
+    font-weight: bold;
+}
