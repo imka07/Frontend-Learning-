@@ -93,6 +93,8 @@
     font-size: 0.95rem;
     color: #333;
   }
+
+
   .product-card ul li::before {
     content: "";
     display: inline-block;
@@ -118,10 +120,6 @@
     text-align: center;
     font-size: 0.9rem;
     color: #333;
-    /* В будущем можно раскрасить каждый див через класс:
-       .warranty { background: #0055ff; color: #fff; }
-       .lifetime { background: #000; color: #fff; }
-    */
   }
   
   /* Подвал с кнопкой */
