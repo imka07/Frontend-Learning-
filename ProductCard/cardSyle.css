@@ -1,149 +1,37 @@
+img {
+    max-width: 40%;
+    height: auto;
+}
 
-
-@media (max-width: 768px) {
-    .product-card {
-      grid-template-areas: 
-        "image"
-        "secondary-image"
-        "header"
-        "features"
-        "description"
-        "warranty"
-        "footer";
-      grid-template-columns: 1fr;
-    }
-  }
-
-/* Сброс некоторых отступов */
-* {
+body
+{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+figure {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 40px;
-    background: #f0f0f0;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Главный контейнер карточки */
-  .product-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    overflow: hidden;
-    max-width: 800px;
+    width: 100%;
+    margin: 0; /* Сбросьте margin по умолчанию */
+    padding: 0; /* Сбросьте padding по умолчанию */
+}
 
-    
-  }
 
-  .product-card .secondary-image {
-    grid-area: secondary-image;
-    margin-top: 20px; /* Отступ от основного изображения */
-  }
-  
-  /* Левая часть — картинка */
-  .product-card figure {
+article
+{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
-    gap: 20px; /* Расстояние между изображениями */
-  }
-  .product-card figure img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Правая часть — контент */
-  .product-card header,
-  .product-card ul,
-  .product-card section,
-  .product-card footer {
-    padding: 20px;
-  }
-  
-  /* Заголовок и подзаголовок */
-  .product-card header h2 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-    color: #222;
-  }
-  .product-card header span {
-    display: inline-block;
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  /* Список фич */
-  .product-card ul {
-    list-style: none;
-    margin: 16px 0;
-  }
-  .product-card ul li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    font-size: 0.95rem;
-    color: #333;
-  }
-
-
-  .product-card ul li::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url('../Pictures/Шестеренка\ иконка.png');
-    background-size: contain;
-    margin-right: 10px;
- }
-
-  
-  /* Блок гарантии и срока службы */
-  .product-card section {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-  .product-card section div {
-    flex: 1;
-    background: #f7f7f7;
-    border-radius: 8px;
-    padding: 12px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #333;
-  }
-  
-  /* Подвал с кнопкой */
-  .product-card footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fafafa;
-  }
-  .product-card footer .btn {
-    display: inline-block;
-    padding: 10px 24px;
-    background: #e91e63;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background 0.3s;
-  }
-  .product-card footer .btn:hover {
-    background: #d81b60;
-  }
-  
-
+    flex-basis: 420px;
+    align-items:center;
+    background-color: aliceblue;
+    margin: 30px;
+    border-radius: 35px;
+    padding: 25px 25px;
+}
 
 .product-card ul.features-list li {
     position: relative;       /* для абсолютного псевдоэлемента */
@@ -176,87 +64,39 @@
   .product-card ul.features-list li.load::before {
     background-image: url('../Pictures/Шестеренка\ иконка.png');
   }
-  
-  /* Секция гарантии / срока службы */
-  .product-card section.warranty-lifetime {
+
+  .product-card footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .product-card footer .btn {
+    display: inline-block;
+    padding: 7px 10px;
+    background: #e91e63;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .product-card section {
     display: flex;
     gap: 12px;
     margin-bottom: 20px;
   }
-  
-  .product-card section.warranty-lifetime .block {
-    position: relative;
+  .product-card section div {
     flex: 1;
-    background: #f7f7f7;
+    background: #ffffff;
     border-radius: 8px;
-    padding: 12px 12px 12px 40px; /* отступ слева под иконку */
-    text-align: left;
+    padding: 12px;
+    text-align: center;
     font-size: 0.9rem;
     color: #333;
-  }
-  
-  /* Псевдоэлементы для warranty и lifetime */
-  .product-card section.warranty-lifetime .block::before {
-    content: "";
-    position: absolute;
-    top: 30%;
-    left: 5px;
-    width: 24px;
-    height: 24px;
-    transform: translateY(-50%);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  
-  .product-card section.warranty-lifetime .block.warranty::before {
-    background-image: url('../Pictures/Шестеренка\ иконка.png');
-  }
-  
-  .product-card section.warranty-lifetime .block.lifetime::before {
-    background-image: url('../Pictures/Шестеренка\ иконка.png');
-  }
-  
-  /* Добавить в конец cardStyle.css */
 
-/* Распределение контента по grid-областям */
-.product-card {
-    grid-template-areas: 
-        "image header"
-        "image features"
-        "image warranty"
-        "image description"
-        "image footer";
-    grid-template-rows: auto auto auto 1fr auto;
-}
+  }
 
-.product-card figure {
-    grid-area: image;
-}
-.product-card header {
-    grid-area: header;
-}
-.product-card ul.features-list {
-    grid-area: features;
-}
-.product-card section.warranty-lifetime {
-    grid-area: warranty;
-}
-.product-card .description {
-    grid-area: description;
-    padding: 20px;
-    color: #333;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-.product-card footer {
-    grid-area: footer;
-}
-
-/* Убрать лишние отступы у описания */
-.description p {
-    margin-bottom: 12px;
-}
-.description p:last-child {
-    margin-bottom: 0;
-}
-
+  .product-card ul {
+    list-style: none;
+  }
