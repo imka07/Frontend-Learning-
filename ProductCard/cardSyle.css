@@ -1,20 +1,36 @@
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Верстка в столбик */
+    }
+    
+    article {
+        margin: 15px; /* Уменьшите отступы */
+        flex-basis: auto; /* Сброс фиксированной ширины */
+    }
+    
+    .product-card section {
+        flex-direction: column; /* Элементы в столбик */
+    }
+}
+
 img {
-    max-width: 40%;
+    width: 100%;
+    max-width: 420px; /* Ограничение для больших экранов */
     height: auto;
 }
 
 body
 {
-    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
 }
 
 figure {
     display: flex;
     justify-content: center;
     width: 100%;
+    max-width: 600px; /* Защита от растягивания */
+    margin: 0 auto; /* Центрирование */
     margin: 0; /* Сбросьте margin по умолчанию */
     padding: 0; /* Сбросьте padding по умолчанию */
 }
@@ -25,8 +41,8 @@ article
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    flex-basis: 420px;
-    align-items:center;
+    flex: 1 1 300px; /* Минимальная ширина 300px, но может сжиматься */
+    min-width: 280px; /* Абсолютный минимум для мобилок */
     background-color: aliceblue;
     margin: 30px;
     border-radius: 35px;
@@ -39,6 +55,8 @@ article
     margin-bottom: 12px;
     font-size: 0.95rem;
     color: #333;
+    font-size: clamp(0.8rem, 3vw, 0.95rem); /* Адаптивный шрифт */
+    white-space: wrap; /* Запрет переноса пунктов */
   }
   
   /* Общие настройки псевдоэлемента */
@@ -100,3 +118,5 @@ article
   .product-card ul {
     list-style: none;
   }
+
+  
