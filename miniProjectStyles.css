@@ -1,3 +1,8 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
 
@@ -8,7 +13,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 
-  scroll-behavior: smooth;
 
   box-sizing: border-box;
   margin: 0;
@@ -232,7 +236,7 @@ img[src*="man"] {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  flex: 1;  /* чтобы текст занимал доступное место */
+  flex: 1; 
   max-width: 590px;
 }
 
@@ -274,4 +278,113 @@ img[src*="man"] {
     display: block;
     width: 650px;
     height: 743px;
+}
+
+
+
+.subscribe-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 150px auto 0;
+    padding: 0 var(--side-padding);
+    gap: var(--gap);
+}
+
+.subscribe-content
+{
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    height: 387px;
+    border-radius: 30px;
+    background-color: black;
+}
+
+.subscribe-content .subscribe-text
+{
+    display: flex;
+    flex-direction: column;
+    width: 642px;
+    height: 330px;
+    padding: 60px; 
+}
+
+.subsribe-subtitle
+{
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0%;
+  color: var(--color-accent);
+}
+
+.subscribe-title
+{
+  display: block;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 79.2px;
+  letter-spacing: 2.88px;
+  color: var(--color-text);
+  margin: 0;
+  margin-top: 4px;
+}
+
+
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;      
+  
+  padding: 50px;
+}
+
+
+.subscribe-fields
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subscribe-fields input
+{
+  padding: 12px 16px;
+  font-size: 24px;
+  line-height: 24px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #1e1e1e;  
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 522px;
+  height: 55px;
+
+}
+
+.subscribe-btn {
+  align-self: flex-start;  /* чтобы не растягивалась на всю ширину */
+  padding: 12px 24px;
+  font-size: 16px;
+  line-height: 24px;
+  background: #118DA8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.subscribe-btn:hover {
+  background: #0e7b93;
+}
+
+.subscribe-btn:active {
+  transform: scale(0.97);
 }
