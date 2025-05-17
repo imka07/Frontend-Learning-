@@ -1,7 +1,7 @@
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
   font-family: 'Inter', sans-serif;
@@ -22,14 +22,35 @@ body {
 }
 
 
+:root {
+  --gap: 40px;
+  --max-width: 1300px;
+  --side-padding: 50px;
+  --color-bg: #191919;
+  --color-text: #fff;
+  --color-accent: #118DA8;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.content-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--side-padding);
+}
+
+
+
 .header-container
 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 119px;
-    gap: 20px;
+  width: 100%;
+  height: 119px;
+  gap: 20px;
 }
 
 
@@ -65,27 +86,21 @@ nav > a:hover
 }
 
 
-main > section {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
-}
+
 
 .home-container {
-    display: flex;
-    justify-content: space-between;  /* вместо center */
-    align-items: center;
     gap: 60px;
 }
 
 
 
 
-img[src*="decor"] {
+.decor {
 
     position: relative;
-    width: 68px;
-    height: 74px;
+    max-width: 68px; 
+    width: auto;
+    height: auto;
     margin-bottom: -100px;
     right: 20px;
 }
@@ -93,9 +108,10 @@ img[src*="decor"] {
 
 img[src*="man"] {
     display: flex;
-    width: 650px;
-    height: 873px;
-    margin-top: 40px;
+    width: 100%;           /* займет весь родительский flex‑контейнер */
+    max-width: 650px;      /* но не больше, чем дизайн */
+    height: auto;          /* соотношение сторон сохраняется */
+    margin-top: 2.5rem; 
 } 
 
 
@@ -144,9 +160,9 @@ img[src*="man"] {
 
 .home-text img[alt="next-image"] {
   display: block;
-  width: 163px;    /* ваш размер */
+  width: 163px;    
   height: 11px;
-  margin-top: -26px;  /* подберите нужное значение */
+  margin-top: -26px;
 }
 
 
@@ -175,7 +191,7 @@ img[src*="man"] {
 
 
 
-.episode-container .episode-text .btn {
+.episode-text .btn {
     display: flex;
     padding: 10px 10px;
     background: #118DA8;
@@ -206,17 +222,6 @@ img[src*="man"] {
     display: flex;
     flex-direction: column;
     gap: 60px;
-}
-
-
-
-:root {
-  --gap: 40px;
-  --max-width: 1300px;
-  --side-padding: 50px;
-  --color-bg: #191919;
-  --color-text: #fff;
-  --color-accent: #118DA8;
 }
 
 
@@ -275,22 +280,20 @@ img[src*="man"] {
 }
 
 .about-image {
-    display: block;
-    width: 650px;
-    height: 743px;
+   display: flex;
+    width: 100%;           /* займет весь родительский flex‑контейнер */
+    max-width: 650px;      /* но не больше, чем дизайн */
+    height: auto;          /* соотношение сторон сохраняется */
+    margin-top: 2.5rem; 
 }
 
 
 
 .subscribe-container
 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: var(--max-width);
-    margin: 150px auto 0;
-    padding: 0 var(--side-padding);
-    gap: var(--gap);
+  max-width: var(--max-width);
+  margin: 150px auto 0;
+  padding: 0 var(--side-padding);
 }
 
 .subscribe-content
@@ -303,7 +306,7 @@ img[src*="man"] {
     background-color: black;
 }
 
-.subscribe-content .subscribe-text
+.subscribe-text
 {
     display: flex;
     flex-direction: column;
@@ -340,7 +343,6 @@ img[src*="man"] {
   display: flex;
   flex-direction: column;
   gap: 20px;      
-  
   padding: 50px;
 }
 
@@ -350,6 +352,7 @@ img[src*="man"] {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex-wrap: wrap; 
 }
 
 .subscribe-fields input
@@ -387,4 +390,70 @@ img[src*="man"] {
 
 .subscribe-btn:active {
   transform: scale(0.97);
+}
+
+
+.sub-decor
+{
+    position: relative;
+    right: 99px;
+    margin-top: 80px;
+    width: 147px;
+    height: 91px;
+
+}
+
+.views-container {
+     max-width: var(--max-width);
+     margin: 150px auto 0;
+     padding: 0 var(--side-padding);
+}
+
+/* Testimonials grid: 3 columns × 2 rows */
+.views-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 16px;
+}
+
+.views-article {
+  background: #000;          
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: #fff;
+  padding: 24px;
+
+}
+
+.views-article-image {
+  display: flex;
+  gap: 5px;
+}
+
+.views-image {
+  width: 18px;    
+  height: auto;
+}
+
+
+.views-text {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43.2px;
+  letter-spacing: 0%;
+}
+
+.views-name {
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28.8px;
+  letter-spacing: 0%;
+  color: rgba(255, 255, 255, 0.7);
+  align-self: flex-start;
+  margin-top: 24px;
 }
