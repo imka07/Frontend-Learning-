@@ -78,6 +78,7 @@ nav > a
     line-height: 27px;
     letter-spacing: 0%;
 
+
 }
 
 nav > a:hover
@@ -456,4 +457,90 @@ img[src*="man"] {
   color: rgba(255, 255, 255, 0.7);
   align-self: flex-start;
   margin-top: 24px;
+}
+
+
+.footer-container {
+  max-width: var(--max-width);
+  margin: 150px auto 0;
+  padding: 0 var(--side-padding);
+}
+
+.footer-content {
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  gap: 16px;
+}
+
+
+.footer-social
+{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 447px;
+  height: 222px;
+}
+
+
+.footer-title
+{
+  display: block;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 28.8px;
+  letter-spacing: 0%;
+  color: var(--color-text);
+  margin: 0;
+}
+
+
+.footer-media-buttons
+{
+  display: flex;
+  gap: 10px;
+}
+
+.footer-nav-buttons
+{
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 178px;
+  height: 222px;
+}
+
+.footer-nav-buttons > a
+{
+  display: block;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  letter-spacing: 0%;
+}
+
+
+.footer-info
+{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-info > a
+{
+  display: block;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  letter-spacing: 0%;
+  gap: 10px;
+}
+
+.footer-music-buttons
+{
+  display: flex;
+  gap: 17px;
 }
