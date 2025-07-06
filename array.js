@@ -17,10 +17,10 @@ function doubleNumbers(arr = []) {
   return Array.isArray(arr) ? arr.map(n => n * 2) : [];
 }
 
-function filterEven(arr) {
+function filterEven(arr = []) {
     return Array.isArray(arr) ? arr.filter(n => n % 2 === 0) : [];
 }
 
-function sumArray(arr) {
+function sumArray(arr = []) {
    return Array.isArray(arr) ? arr.reduce((total, num) => total + num, 0) : 0;
 }
