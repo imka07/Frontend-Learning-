@@ -1,92 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Frontend Learning</title>
-  <link rel="icon" type="image/png" href="Pictures/Me.png"> 
+  <title>Imran Shokuev · Frontend Developer</title>
+  <link rel="icon" type="image/png" href="Pictures/Me.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
-  <header>
-    <h1>Визитка "Обо мне"</h1> 
-    <a href="miniProject.html">Главная</a>
-    <a href="darkTheme.html">Обо мне</a>
-    <a href="#Portfolio">Портфолио</a>
-    <a href="#Contacts">Контакты</a>
-    <a href="Blog/blogPost.html">Блог</a>
-    <a href="ProductCard/productCard.html">Товары</a>
+  <div class="page-gradient"></div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">Imran<span>.</span></div>
+      <nav class="nav">
+        <a href="#hero">Главная</a>
+        <a href="#about">Обо мне</a>
+        <a href="#skills">Навыки</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#contacts">Контакты</a>
+        <a href="Blog/blogPost.html" class="nav-link-soft">Блог</a>
+        <a href="ProductCard/productCard.html" class="nav-link-soft">Товары</a>
+      </nav>
+    </div>
   </header>
 
-  <div id="Main">
-    <h2>Привет! Меня зовут Шокуев Имран</h2>
-    <h3>Я начинающий Frontend Developer и хочу рассказать о себе.</h3>
-    <img src="Pictures/Me.png" alt="Picture of user">
-  </div>
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Frontend Developer · Unity / AR</p>
+          <h1 class="hero-title">
+            Привет, я Имран.<br>
+            Создаю интерфейсы и цифровой опыт.
+          </h1>
+          <p class="hero-subtitle">
+            19‑летний разработчик из Москвы. Учусь в НИТУ МИСИС, развиваюсь во Frontend и AR, 
+            участвую в хакатонах и делаю проекты, которые не стыдно показать.
+          </p>
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary">Смотреть проекты</a>
+            <a href="#contacts" class="btn btn-ghost">Связаться</a>
+          </div>
+          <div class="hero-meta">
+            <span>НИТУ МИСИС · Web & Mobile</span>
+            <span>4+ года Unity / AR Dev</span>
+          </div>
+        </div>
 
-  <div id="AboutMe">
-    <h2>Обо мне </h2>
-    <p>
-      Мне 19 лет, учусь и проживаю в Москве. В 2023 году поступил в НИТУ МИСИС
-      на веб-разрботку и мобильные приложения. Сейчас изучаю Frontend и хочу освоить
-      эту область. Есть 4-х летний опыт в Unity/AR Dev. Участвовал в различных хакатонах
-      и выйграл грант на разработку игры от мин. КБР. Встречаюсь с Даной, посмотрим, 
-      что из этого получится. Про друзья я ниче сказать не могу, с кем-то общаюсь, не могу сказать, 
-      что уверен в правильности своего выбора, но я думаю нормально сомневаться, даже?
+        <div class="hero-photo-card">
+          <div class="photo-wrapper">
+            <img src="Pictures/Me.png" alt="Shokuev Imran">
+            <div class="photo-glow"></div>
+          </div>
+          <div class="hero-badge hero-badge-main">
+            В пути к сильному frontend‑портфолио
+          </div>
+          <div class="hero-badge hero-badge-side">
+            Hackathons · Grants · Teamwork
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </p>
+    <!-- About -->
+    <section id="about" class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <h2>Обо мне</h2>
+          <p>Немного контекста, кто я и куда иду.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Кто я</h3>
+            <p>
+              Меня зовут Шокуев Имран, мне 19. Живу и учусь в Москве. 
+              В 2023 году поступил в НИТУ МИСИС на направление веб‑разработка и мобильные приложения, 
+              сейчас сфокусирован на Frontend.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Опыт</h3>
+            <p>
+              Более 4 лет работаю с Unity и AR: участвовал в хакатонах, 
+              получал грант на разработку игры от Минкульта КБР и постоянно пробую новые технологии.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Мотивация</h3>
+            <p>
+              Frontend — это быстрый фидбек и видимый результат. Хочу сочетать веб, AR и игровое мышление, 
+              чтобы делать живые интерфейсы и интересные продукты.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Лайф вне кода</h3>
+            <p>
+              Хожу в зал, играю в футбол, люблю настолки и время с близкими. 
+              Но большую часть времени всё равно уходит на учебу, проекты и развитие.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h3>Образование</h3>
-    <span>НИТУ МИСИС</span>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Навыки</h2>
+          <p>Технологии и инструменты, с которыми комфортно работать.</p>
+        </div>
+        <div class="chips">
+          <span class="chip chip-main">HTML (основы → уверенное владение в процессе)</span>
+          <span class="chip">CSS / адаптивная верстка</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Unity</span>
+          <span class="chip">AR Developing</span>
+          <span class="chip">C#</span>
+          <span class="chip">Figma</span>
+          <span class="chip">Git / GitHub</span>
+          <span class="chip">Team Work</span>
+          <span class="chip">English</span>
+        </div>
+      </div>
+    </section>
 
-    <h3>Хобби</h3>
-    <p>
-      Хожу в зал, люблю играть в футбол периодически с кентами. Настолки тоже нет нет
-      можно поиграть, короче не супер конечно красочно, но в основном я стараюсь работать. 
-      Вот прям щас работаю, делая этот сайт
-    </p>
+    <!-- Portfolio -->
+    <section id="portfolio" class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <h2>Портфолио</h2>
+          <p>Проекты в процессе пополнения. Пока можно посмотреть общий обзор.</p>
+        </div>
+        <div class="portfolio-grid">
+          <a href="https://www.notion.so/Shokuev-Imran-608fcc4c481d425791b615cb7bb25774" 
+             target="_blank" 
+             class="portfolio-card main-card">
+            <div class="portfolio-label">Notion-портфолио</div>
+            <h3>Актуальные проекты и опыт</h3>
+            <p>
+              Сводная страница с учебными и личными проектами, хакатонами и AR‑разработкой.
+            </p>
+            <span class="portfolio-link">Открыть в Notion →</span>
+          </a>
 
-    <h3>Почему решил изучить Frontend?</h3>
-    <p>
-      Потому что Unity никому не всрался, я хочу изучить что-то новое и Frontend
-      очень часто используется во всяких хакатонах и для проектов с Али тоже нужно знать Frontend
-    </p>
-    
-    <h3>Навыки</h3>
-    <p>
-      <ul>
-        <li>Unity</li>
-        <li>AR Developing</li>
-        <li>C#</li>
-        <li>English</li>
-        <li>Figma</li>
-        <li>GitHub</li>
-        <li>Git</li>
-        <li>Team Work</li>
-        <li>Базовые знания HTML</li>
-      </ul>
-    </p>
-  </div>
+          <a href="Blog/blogPost.html" class="portfolio-card">
+            <div class="portfolio-label">Блог</div>
+            <h3>Заметки и эксперименты</h3>
+            <p>
+              Личные мысли, заметки по обучению и интересные находки из мира разработки.
+            </p>
+            <span class="portfolio-link">Читать блог →</span>
+          </a>
 
-  <div id="Portfolio">
-    <h2>
-      <a href="https://www.notion.so/Shokuev-Imran-608fcc4c481d425791b615cb7bb25774" target="_blank">Мое портфолио тут</a>
-    </h2>
-  </div>
+          <a href="ProductCard/productCard.html" class="portfolio-card">
+            <div class="portfolio-label">UI / Product</div>
+            <h3>Карточки товаров и интерфейсы</h3>
+            <p>
+              Небольшие UI‑эксперименты и продуктовые карточки, сделанные в процессе обучения.
+            </p>
+            <span class="portfolio-link">Смотреть UI →</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <div id="Contacts">
-    <h2>Контакты</h2>
-    <ul>
+    <!-- Contacts -->
+    <section id="contacts" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Контакты</h2>
+          <p>Открыт к стажировкам, пет‑проектам и коллаборациям.</p>
+        </div>
+        <div class="contacts-grid">
+          <div class="contacts-card">
+            <h3>Написать</h3>
+            <ul>
+              <li><a href="mailto:sasquatch@yandex.ru">sasquatch@yandex.ru</a></li>
+            </ul>
+          </div>
+          <div class="contacts-card">
+            <h3>Профили</h3>
+            <ul>
+              <li><a href="https://hh.ru/resume/6dbfea2aff0dd096660039ed1f514b34534944" target="_blank">HH.ru резюме</a></li>
+              <li><a href="https://github.com/imka07" target="_blank">GitHub</a></li>
+            </ul>
+          </div>
+          <div class="contacts-card">
+            <h3>Статус</h3>
+            <p>
+              Учусь фуллтайм, делаю pet‑проекты и ищу возможности применить навыки в реальных задачах.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      <li> <a href="mailto:sasquatch@yandex.ru">Написать на почту</a>.</li>
-      <li> <a href="https://hh.ru/resume/6dbfea2aff0dd096660039ed1f514b34534944">HH.RU</a></li>
-      <li> <a href="https://github.com/imka07">GitHub</a></li>
-    </ul>
-  </div>
-
-  <footer>
-    <span>© 2025 Shokuev Imran</span>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2025 Shokuev Imran</span>
+      <span class="footer-note">Создано как личное портфолио · Frontend‑learning</span>
+    </div>
   </footer>
+
+  <script type="module" src="main.js"></script>
 </body>
-<script type="module" src="main.js"></script>
 </html>
